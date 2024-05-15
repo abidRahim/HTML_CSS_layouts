@@ -38,6 +38,8 @@ p, h1, h2, h3, h4, h5, h6 {
 :root {
   --text-color-1: rgba(0, 0, 0, 0.529);
   --text-color-2: #000;
+  --background-color1: #fafaf0;
+  --background-color2: #f5f4e4;
   --border-color: rgba(0, 0, 0, 0.2);
   --hover-color: #9daba9;
 }
