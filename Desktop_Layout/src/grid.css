@@ -1,0 +1,309 @@
+/*
+Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+/* prettier-ignore */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  html {
+    font-size: 18pt;
+    /* import below fonts from https://fonts.google.com/ */
+    font-family: "Manrope", "Inter", sans-serif;
+  }
+  body {
+    color: var(--text-color-1);
+    background-color: var(--background-color1);
+    overflow-x: hidden;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* prettier-ignore */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /* prettier-ignore */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /* prettier-ignore */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /* prettier-ignore */
+  #root, #__next {
+    isolation: isolate;
+  }
+  :root {
+    --text-color-1: rgba(0, 0, 0, 0.529);
+    --text-color-2: #000;
+    --background-color1: #fafaf0;
+    --background-color2: #f5f4e4;
+    --border-color: rgba(0, 0, 0, 0.2);
+    --hover-color: #9daba9;
+  }
+  
+  code {
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+  
+  @media (max-width: 1280px) {
+    html {
+      font-size: 13pt;
+    }
+  }
+  
+  @media (max-width: 736px) {
+    html {
+      font-size: 11pt;
+    }
+  }
+  
+  @media (max-width: 480px) {
+  }
+  
+  header, footer{
+    
+    box-sizing: border-box;
+    padding: 80px;
+  }
+  
+  .header1,.footer1 {
+    padding: 30px 200px;
+  }
+  
+  .header1 h1,.footer1 h1  {
+    font-size: 70px;
+    font-weight: 300;
+    
+  }
+  
+  
+  em {
+    color: var(--text-color-2);
+    padding: 0 2px;
+  } 
+  
+  
+  input {
+    border-radius: 50px;
+    letter-spacing: 10px;
+    background-color: #fafaf0;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    font-size: 10px;
+    padding : 10px 25px 10px 25px;
+  
+  } 
+  button {
+    border-radius: 50px;
+    letter-spacing: 5px;
+    background-color: #fafaf0;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    font-size: 10px;
+    padding : 10px 25px 10px 25px;
+    
+    
+  }
+  
+  img {
+    position: relative;
+    height: 600px;
+    width: 100%;
+  }
+  
+  h6,h1, p {
+    padding-bottom: 20px;
+  }
+  
+  
+  h1{
+    font-weight: 10;
+    font-size: 30px;
+  }
+  
+  .flex-section1{
+    background: var(--background-color2);
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(200px,1fr) minmax(800px,1fr);
+  
+   
+  }
+   
+  .flex-section1 .sec1{
+    display: grid;
+    top: 80px;
+    padding: 10px;
+    margin: 30px;
+    width: 70%;
+    
+   
+  }
+  
+  .flex-section1  h1{
+    font-size: 50px;
+    font-weight: 100;
+  }
+   
+  .flex-section1  .btn{
+    margin:30px;
+    left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+   border-radius: 30%;
+  }
+   
+  .flex-section2{
+    /* width: 100%;
+    justify-content: center;
+    margin-top: 30px; */
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, minmax(250px,1fr));
+    padding: 30px 10px 30px 100px;
+  }
+   
+   
+  .flex-section2 p{
+    text-align: left;
+  }
+  .flex-section2 .sec1{
+   
+    /* display: grid;
+    padding: 20px;
+    margin: 30px; */
+    width: 30%;
+   
+  }
+  .flex-section2 .sec2{
+   
+    /* display: grid;
+    padding: 20px;
+    margin: 30px; */
+    width: 30%;
+
+  }
+  .flex-section2  h1{
+    font-size: 50px;
+    font-weight: 100;
+  }
+   
+  .flex-section2  .btn{
+    margin: 20px;
+    border-radius: 50px;
+    letter-spacing: 5px;
+    font-size: small;
+    padding: 10px;
+    border: 2px solid var(--text-color-1) ;
+  }
+   
+  .flex-section3{
+    background: var(--background-color2);
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(800px,1fr) minmax(200px,1fr);
+   
+  }
+   
+  .flex-section3 .sec1{
+    /* top: 80px; */
+    padding: 10px;
+    margin: 30px;
+    width: 70%;
+    display: grid;
+   
+  }
+  
+  .flex-section3  h1{
+    font-size: 50px;
+    font-weight: 100;
+  }
+   
+  .flex-section3  .btn{
+    margin:30px;
+    left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+   border-radius: 30%;
+  }
+  
+  .flex-section4{
+    /* width: 100%;
+    justify-content: center;
+    margin-top: 30px; */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px,1fr));
+    padding: 30px 10px 30px 100px;
+    justify-items: center;
+  }
+
+   
+   
+  .flex-section4 p{
+    text-align: left;
+  }
+  .flex-section4 .sec1{
+   
+    /* display: grid; */
+    /* padding: 20px; */
+    /* margin: 30px; */
+    width: 70%;
+
+   
+  }
+  .flex-section4 .sec2{
+    /* display: grid; */
+    /* padding: 20px;
+    margin: 30px; */
+    width: 70%;
+    
+  }
+  .flex-section4  h1{
+    font-size: 50px;
+    font-weight: 100;
+  }
+   
+  .flex-section4  .btn{
+    margin: 20px;
+    border-radius: 50px;
+    letter-spacing: 5px;
+    font-size: small;
+    padding: 10px;
+    border: 2px solid var(--text-color-1) ;
+  }
+  
+  .flex-section5{
+    background: var(--background-color2);
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(200px,1fr) minmax(800px,1fr);
+  }
+   
+  .flex-section5 .sec1{
+    display: grid;
+    top: 80px;
+    padding: 10px;
+    margin: 30px;
+    width: 70%;
+
+  
+  }
+
+  .flex-section5  h1{
+    font-size: 50px;
+    font-weight: 100;
+  }
+   
+  .flex-section5  .btn{
+    margin:30px;
+    left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+   border-radius: 30%;
+  }
+
+  
