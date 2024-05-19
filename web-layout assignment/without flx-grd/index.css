@@ -1,0 +1,286 @@
+/*
+Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+/* prettier-ignore */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html {
+  font-size: 18pt;
+  /* import below fonts from https://fonts.google.com/ */
+  font-family: "Manrope", "Inter", sans-serif;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/* prettier-ignore */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/* prettier-ignore */
+input, button, textarea, select {
+  font: inherit;
+}
+/* prettier-ignore */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* prettier-ignore */
+#root, #__next {
+  isolation: isolate;
+}
+:root {
+  --text-color-1: rgba(0, 0, 0, 0.529);
+  --text-color-2: #000;
+  --background-color1: #fafaf0;
+  --background-color2: #f5f4e4;
+  --border-color: rgba(0, 0, 0, 0.2);
+  --hover-color: #9daba9;
+}
+
+code {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+@media (max-width: 1280px) {
+  html {
+    font-size: 13pt;
+  }
+}
+
+
+/* ----css properties----- */
+
+/* ---------common properties------------ */
+.heading{
+  font-weight: 400;
+  color: var(--text-color-1);
+  margin-bottom: 10px;
+}
+
+span{
+  color: #000;
+  font-style: italic;
+}
+
+.head-p1{
+  color: var(--text-color-1);
+  margin-bottom: 10px;
+
+}
+
+.head-p2{
+  color: var(--text-color-1);
+  font-weight: 500;
+  font-size: medium;
+  margin-bottom: 1rem;
+  width: 80%;
+}
+
+button{
+  border-radius: 60px;
+  letter-spacing: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 22px;
+  border: solid var(--border-color);
+  margin: 2% 0%;
+
+  &:hover{
+    padding:9px 25px;
+  transition: 0.4s;
+  color: #808483;
+  }
+
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+/* ---------------------------------------------------- */
+
+
+header{
+  padding: 6rem;
+}
+
+.head-container > p{
+  color: var(--text-color-1);
+}
+
+.head-container > p span{
+  color: black;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* ------------------section one-------------------------------------- */
+
+.section-one{
+  background-color: var(--background-color2);
+}
+
+.container-1{
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  padding: 4rem 3rem 0;
+
+}
+
+.image-one{
+  display: inline-block;
+  vertical-align: top;
+  width: 59.5%;
+}
+
+/* -------------------------section two-------------------------- */
+
+.section-two{
+  background-color: var(--background-color2);
+}
+
+.image-two{
+  display: inline-block;
+  width: 59.5%;
+  height: 650px;
+  object-fit: cover;
+}
+
+.container-1-1{
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  padding: 4rem 3rem 0;
+}
+
+
+
+/* -------------------------- */
+
+/* ------aside----------- */
+
+.content-1{
+  display: inline-block;
+  vertical-align: top;
+  width: 49.555%;
+  padding: 4rem 3rem 2rem;
+  
+}
+
+/* .content-2{
+  display: inline-block;
+  vertical-align: top;
+  width: 49%;
+  padding: 4rem 3rem 0;
+  outline: 2px solid blue;
+} */
+
+/* -------------------------------- */
+
+/* -----------------------footer----------------------- */
+
+footer{
+  padding:6rem;
+}
+
+input{
+  width: 65%;
+  background-color: transparent;
+  border-radius: 19px;
+  padding:10px 22px;
+  font-size: 14px;
+  border: 1px solid var(--hover-color);
+  margin: 2% 0%;
+  margin-right: 3%;
+  outline: none;
+}
+.fa-brands, .fa-envelope {
+  border: solid var(--border-color);
+  color: var(--text-color-1);
+  padding: 15px;
+  border-radius: 100%;
+  font-size: 20px;
+  margin: 0px 6px;  
+}
+
+.fa-facebook-f{
+  width: 56px;
+  text-align: center;
+
+}
+
+/* ---------------------------------------- */
+
+
+@media (max-width: 736px) {
+  html {
+      font-size: 11pt;
+  }
+  img{
+    height: 300px;
+  }
+  /* ----------------------heading--------- */
+  header{
+    width: 100%;
+    padding: 10px;
+  }
+
+  .head-container{
+    display: block;
+    width: 100%;
+    padding-left: 3rem;
+    padding-top: 3rem;
+
+  }
+  /* ------------------------------------------- */
+
+  .section-one{
+    width: 100%;
+    background-color: #000;
+  }
+
+  .container-1{
+    background-color: var(--background-color1);
+    display: block;
+    margin: auto;
+    padding: auto; 
+    width: 100%;    
+  }
+
+  .image-one{
+    width: 100%;
+    height: 300px;
+  }
+
+
+  /* -----------------section two-------------------------- */
+  .section-two{
+    width: 100%;
+  }
+
+  .image-two{
+    display: block;
+    width: 100%;
+  }
+
+  .content-1{
+    display: block;
+    width: 100%;
+  }
+
+  /* .section-two {
+    direction: rtl;
+  } */
+}
+
+@media (max-width: 480px) {
+}
