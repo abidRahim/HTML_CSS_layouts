@@ -1,0 +1,253 @@
+/*
+Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+/* prettier-ignore */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html {
+    font-size: 18pt;
+    /* import below fonts from https://fonts.google.com/ */
+    font-family: "Manrope", "Inter", sans-serif;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* prettier-ignore */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* prettier-ignore */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* prettier-ignore */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* prettier-ignore */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+:root {
+    --text-color-1: rgba(0, 0, 0, 0.529);
+    --text-color-2: #000;
+    --background-color1: #fafaf0;
+    --background-color2: #f5f4e4;
+    --border-color: rgba(0, 0, 0, 0.2);
+    --hover-color: #9daba9;
+}
+
+code {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+  /* cards */
+
+  .card{
+    /* width: 100%; */
+    padding: 12% 11% ;
+
+    span{
+      font-weight: 600;
+      font-style: italic;
+      margin-right: 0.7%;
+      color: var(--text-color-2);
+      
+      
+    }
+    h1{
+      font-size: 42px;
+      font-weight: 400;
+      color: var(--text-color-1);
+    }
+    p{
+      font-weight: 200;
+      margin: 4% 0%;
+      line-height: 28px;
+      color: var(--text-color-1);
+      font-size: 16px;
+      text-align: justify;
+      
+     
+    }
+  }
+  .card1{
+    width: 100%;
+    p{
+      margin: 2% 0%;
+    }
+
+   
+    h1{
+      font-size: 62px;
+    }
+   
+  }
+/*button  */
+button{
+    background-color: transparent;
+    border-radius: 19px;
+    padding:10px 22px;
+    font-size: 12px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    border: 2px solid var(--border-color);
+    margin: 2% 0%;
+  
+  }
+  button:hover{
+    padding:9px 25px;
+    transition: 0.4s;
+    color: #808483;
+  }
+  /*section  */
+  .sec, .sec-b{
+    background-color: var(--background-color1);
+  }
+  .sec-a{
+    background-color: var(--background-color2);
+    display: grid;
+    grid-template-columns: 36% 64%;
+    grid-template-rows: 1fr;
+    
+  }
+  .sec-b{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0% 12%;
+    p{
+      text-align: justify;
+    }
+  }
+  /* img */
+  .sec-img{
+    width: 100%;
+    max-height: 500px;
+    img{
+      object-fit:cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+   /* input */
+   input{
+    width: 64%;
+    background-color: transparent;
+    border-radius: 19px;
+    padding:10px 22px;
+    font-size: 14px;
+    border: 1px solid var(--hover-color);
+    outline: none;
+  }
+  ul{
+    display: flex;
+    list-style-type: none;
+    li{
+      margin-right: 10px;
+      border: solid;
+      border-color: var(--border-color);
+      padding: 5px;
+      border-radius: 25px;}
+  }
+  form{
+    button{
+      width: 34%;
+      letter-spacing: 2px;}
+  }
+
+  /* section */
+  .sec{
+    display: grid;
+    grid-template-columns: 0.5fr 4fr 0.5fr;
+
+  }
+  .swap{
+    grid-template-columns:64% 36% ;
+  }
+
+  @media (max-width: 736px){
+   
+  .sec{
+    grid-template-columns:0% 1fr 0%;
+    
+    .card{
+      padding: 6% 4%;
+
+    }
+  }
+  .sec-a{
+    grid-template-columns: 1fr;
+    grid-row: 300px 1fr;
+    .sec-img{
+      order: 1;
+      max-height: 300px;
+    }
+    .card{
+      order: 2;
+      padding: 6% 4%;
+    }
+  }
+  .sec-b{
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    padding: 0% 0%;
+    .card{
+      padding: 3% 4%;
+      margin: 0%;
+    }
+  }
+    form{
+      display: flex;
+      flex-direction: column;
+      input{
+        width: 90%;
+      }
+      button{
+        width: 45%;
+      }
+    }
+    }
+  
+    @media (max-width: 480px){
+      form{
+        button{
+          width: 90%;
+        }
+      }
+      .card1{
+        h1{
+          font-size: 48px;
+        }
+      }
+  
+    }
