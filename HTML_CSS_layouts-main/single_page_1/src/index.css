@@ -1,0 +1,330 @@
+/*
+Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+/* prettier-ignore */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html {
+  font-size: 18pt;
+  /* import below fonts from https://fonts.google.com/ */
+  font-family: "Manrope", "Inter", sans-serif;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/* prettier-ignore */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/* prettier-ignore */
+input, button, textarea, select {
+  font: inherit;
+}
+/* prettier-ignore */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* prettier-ignore */
+#root, #__next {
+  isolation: isolate;
+}
+:root {
+  --text-color-1: rgba(0, 0, 0, 0.529);
+  --text-color-2: #000;
+  --background-color1: #fafaf0;
+  --background-color2: #f5f4e4;
+  --border-color: rgba(0, 0, 0, 0.2);
+  --hover-color: #9daba9;
+}
+/* section1 */
+/*header*/
+header{
+  margin: 200px;
+}
+.head{
+  align-items: center;
+  font-size: 100px;
+  font-weight: 300;
+  color: #767670;
+}
+ 
+ 
+/*buttons*/
+.btn{
+  /* border: 1px solid black;
+  border-radius: 6px ;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight:100;
+  padding: 8px 22px;
+  letter-spacing: .5px;
+  margin: 0;
+   */
+ 
+  border-radius: 17px;
+  padding:8px 22px;
+  font-size: 12px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  border: 1px solid #c8c8c0;
+  margin: 4% 0%;
+  text-transform: uppercase;
+}
+.btn:hover{
+  border: 1px solid var(--border-color);
+  border-radius: 17px ;
+  transition: 0.2s;
+  padding: 9px 23px;
+}
+ 
+h2{
+  align-items: center;
+  font-size: 50px;
+  font-weight: 300;
+  color: #767670;
+  margin-bottom: 30px;
+}
+h4{
+  font-size: 20px;
+  font-weight: 20;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+span{
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+ 
+p{
+  font-size: 18px;
+  color: #9daba9;
+  line-height: 35px;
+  margin-bottom: 50px;
+}
+/* Section  2 */
+/*side*/
+.section2, .section6{
+  background-color: #f5f4e3;
+ 
+}
+.first{
+  display: inline-block;
+  vertical-align: top;
+  margin: 50px;
+  padding: 100px 5px;
+  width: 32%;
+}
+ 
+.img1 {
+  display: inline-block;
+  vertical-align: top;
+  width: 60%;
+  float: right;
+  position: absolute;
+}
+ 
+/* section 3 */
+.section3{
+  height: 100%;
+  width: 100%;
+ 
+}
+.content1{
+  margin: 50px;
+  display: inline-block;
+  vertical-align: top;
+  width: 38%;
+  align-content: center;
+}
+.content2{
+  margin: 50px;
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  align-content: center;
+}
+ 
+/* section 4 */
+.section4{
+  height: 100%;
+  width: 100%;
+ 
+}
+ 
+.img2 {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  img{
+    object-fit: cover;
+    /* height: 500px;
+    width: 1500px; */
+  }
+}
+ 
+.four{
+  margin: 50px;
+  display: inline-block;
+  vertical-align: top;
+  width: 35%;
+  align-content: center;
+}
+/* footer */
+.btn_footer{
+  /* border: 1px solid black;
+  border-radius: 6px ;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight:100;
+  padding: 8px 22px;
+  letter-spacing: .5px;
+  margin: 0;
+   */
+  background-color: #ffffff;
+  border-radius: 17px;
+  padding:8px 22px;
+  font-size: 12px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  border: 1px solid #c8c8c0;
+  margin: 4% 0%;
+}
+.btn_footer:hover{
+  border: 1px solid #c8c8c0;
+  border-radius: 6px ;
+  transition: 0.2s;
+  padding: 9px 23px;
+}
+ 
+input{
+  width: 63%;
+  padding: 10px;
+  color:#9daba9;
+}
+.email{
+  border-radius: 17px;
+  padding:8px 22px;
+  font-size: 12px;
+  letter-spacing: 8px;
+  font-weight: bold;
+  border: 1px solid;
+  margin: 4% 0%;
+}
+ 
+button{
+  width: 20%;
+  padding: 10px;
+  color: #9daba9;
+}
+ 
+.fa-brands, .fa-envelope {
+  border: solid var(--border-color);
+  color: var(--text-color-1);
+  padding: 7px;
+  border-radius: 35px;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  margin: 0px 5px;
+}
+code {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+ 
+@media (max-width: 1280px) {
+  html {
+    font-size: 13pt;
+  }
+}
+ 
+@media (max-width: 736px) {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  html {
+    font-size: 12pt;
+    /* import below fonts from https://fonts.google.com/ */
+    font-family: "Manrope", "Inter", sans-serif;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* prettier-ignore */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /* prettier-ignore */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /* prettier-ignore */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /* prettier-ignore */
+  #root, #__next {
+    isolation: isolate;
+  }
+  :root {
+    --text-color-1: rgba(0, 0, 0, 0.529);
+    --text-color-2: #000;
+    --background-color1: #fafaf0;
+    --background-color2: #f5f4e4;
+    --border-color: rgba(0, 0, 0, 0.2);
+    --hover-color: #9daba9;
+  }
+ 
+  header{
+    margin: 200px;
+  }
+  .head{
+    font-size: 50px;
+    font-weight: 100;
+    color: #767670;
+  }
+  h2{
+    font-size: 5px;
+    font-weight: 100;
+    color: #767670;
+    margin-bottom: 10px;
+  }
+  h4{
+    font-size: 10px;
+    font-weight: 20;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  span{
+    font-size: 10px;
+    font-weight: bold;
+    font-style: italic;
+  }
+ 
+  p{
+    font-size: 10px;
+    color: #9daba9;
+    line-height: 10px;
+    margin-bottom: 50px;
+  }
+}
+ 
+@media (max-width: 480px) {
+ 
+}
+ 
+
