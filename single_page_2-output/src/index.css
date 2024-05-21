@@ -1,0 +1,409 @@
+/*
+Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+/* prettier-ignore */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html {
+  font-size: 18pt;
+  /* import below fonts from https://fonts.google.com/ */
+  font-family: "Inter", sans-serif;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/* prettier-ignore */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/* prettier-ignore */
+input, button, textarea, select {
+  font: inherit;
+}
+/* prettier-ignore */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* prettier-ignore */
+#root, #__next {
+  isolation: isolate;
+}
+:root {
+  --text-color-1: #fff;
+  --text-color-2: #00ffc2;
+  --background-color1: #fafaf0;
+  --background-color2: #f5f4e4;
+  --border-color: rgba(0, 0, 0, 0.2);
+  --hover-color: #9daba9;
+}
+
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: scale(1);
+  height: 100vh;
+  width: 100vw;
+  /* use correct CSS property to have "background.svg" file under assets folder set as background image here */
+  /* background-image: url(/assets/background.svg); */
+  /* z-index: -1; */
+  background-attachment: scroll;
+}
+
+code {
+  font-family: "Courier New", monospace;
+}
+
+/* ------------------------------------------------------------------- */
+
+
+/* -------------common css----------------------- */
+
+body{
+  background-color: #18252e;
+  color: white;
+}
+
+.heading-one{
+  color: var(--text-color-2);
+}
+
+/* .heading-two{
+  margin-bottom: 10px;
+} */
+
+
+.section-title{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.section-title p{
+  font-size: 12pt;
+  margin-bottom: 50px;
+}
+
+
+button{
+  border: 2px solid var(--text-color-2);
+  border-radius: 50px;
+  padding: 10px;
+  background: transparent;
+  color: white;
+  font-size: 18px;
+
+}
+
+/* ---------------------------header----------------------------------- */
+
+.head-area{
+  padding: 4rem;
+  width: 100%;
+  display: flex;
+}
+
+.head-container{
+  flex: 1;
+}
+
+.head-image{
+  border: 2px solid var(--text-color-2);
+  padding: 10px;
+  border-radius: 25px;
+  flex: 1;
+}
+
+
+.head-container p{
+  margin-bottom: 30px;
+}
+
+
+.head-image img{
+  width: 100%;
+  max-height: 500px;
+  border-radius: 25px;
+}
+
+/* -----------------------section one------------------------ */
+
+.section-one{
+  padding: 2rem 4rem 3rem 4rem;
+}
+
+.section-contents{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 3rem;
+  margin-bottom: 40px;
+}
+
+.section-contents img{
+  border: 2px solid var(--text-color-2);
+  border-radius: 25px;
+}
+
+.sec-one-img1 img{
+  border-radius: 25px;
+  padding: 10px;
+  object-fit: cover;
+}
+
+.section-contents p,h2{
+  text-align: center;
+}
+
+.section-contents p{
+  font-size: 12pt;
+}
+
+
+
+/* -----------------------------------section two--------------------------- */
+
+.container-2{
+  padding: 2rem 4rem 3rem 4rem;
+  display: flex;
+  gap: 2rem; 
+}
+
+.container-2 p{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: medium;
+  font-weight: 100;
+}
+
+.section-two-img{
+  width: 100%;
+}
+
+.section-two-img img{
+  flex: 1;
+  border: 2px solid var(--text-color-2);
+  padding: 10px;
+  border-radius: 25px;
+  width: 100%;
+  height: 100%;
+
+}
+.sec-two-btn{
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+
+/* --------------------------------section three---------------------------- */
+
+.sec-three-contents{
+  padding: 2rem 4rem 3rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.content-box{
+  text-align: center;
+  font-size: small;
+  grid-column: 1;
+  padding: 5rem;
+  gap: 20px;
+  border: 1px solid var(--hover-color);
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
+}
+
+.content-box2{
+  padding: 5rem;
+  grid-column: 2;
+  text-align: center;
+  font-size: small;
+  border: 1px solid var(--hover-color);
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+.content-box-h5{
+  font-size: medium;
+  color: var(--text-color-2);
+}
+
+.sec-three-heading{
+  color: var(--text-color-2);
+}
+
+.sec-three-contents h1{
+  font-size: 100px;
+}
+
+.sec-three-contents button{
+  margin-top: 50px;
+  width: 40%;
+}
+
+.content-box3{
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ---------------------------------footer------------------------- */
+
+
+.footer {
+  padding: 2rem 4rem 3rem 4rem;
+  display: flex;
+  justify-content: space-around;
+ 
+}
+ 
+.logo {
+  display: flex;
+  gap: 20px;
+
+}
+ 
+.icons{
+  border: 1px solid var(--text-color-2);
+  border-radius: 40px;
+  padding:5px 12px;
+  color: white;
+}
+
+/* 
+@media (max-width: 1280px) {
+  html {
+    font-size: 13pt;
+  }
+} */
+/* =========================================================================================== */
+@media (max-width: 736px) {
+  html {
+    font-size: 11pt;
+  }
+
+  img{
+    width: 100%;
+    max-height: 300px;
+    border-radius: 25px;
+  }
+
+  .head-area{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    
+  }
+
+  .head-container{
+    flex: 1;
+    margin-bottom: 40px;
+  }
+  .head-image{
+    width: 100%;
+    flex: 2;
+  }
+
+/* -----------------------------section one------------------------------------------ */
+
+  .section-contents{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem 2rem 1rem 2rem;
+
+  }
+
+  .section-title{
+    text-align: center;
+  }    
+
+  .sec-one-img1{
+    width: 100%;
+
+  }
+
+  .image-content{
+    text-align: center;
+  }
+  .sec-one-btn{
+    margin-bottom: 40px;
+  }
+
+  /* ------------------second section--------------------- */
+
+
+  .section-two{
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  .container-2{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-2 img{
+    width: 100%
+  }
+
+  .contents{
+    text-align: center;
+  }
+
+  /* -----------------section three--------------- */
+
+  .section-three{
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  .sec-three-contents{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .content-box{
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 0;
+  }
+
+  .content-box2{
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-top-right-radius: 0;
+  }
+
+  .content-box p{
+    font-weight: 100;
+    font-size: smaller;
+  }
+
+
+  /* ----------------------------------footer------------------- */
+
+  .footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .icons{
+    margin-bottom: 20px;
+    border-radius: 50%;
+    padding: 8px 10px 8px 10px;
+  }
+
+}
