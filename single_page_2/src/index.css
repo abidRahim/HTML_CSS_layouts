@@ -44,6 +44,21 @@ p, h1, h2, h3, h4, h5, h6 {
   --hover-color: #9daba9;
 }
 
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: scale(1);
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+  /* use correct CSS property to have "background.svg" file under assets folder set as background image here */
+  background-attachment: scroll;
+}
+
 code {
   font-family: "Courier New", monospace;
 }
