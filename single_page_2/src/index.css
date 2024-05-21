@@ -1,0 +1,332 @@
+/*
+Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+/* prettier-ignore */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html {
+  font-size: 18pt;
+  /* import below fonts from https://fonts.google.com/ */
+  font-family: "Inter", sans-serif;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  color: var(--text-color-1);
+}
+/* prettier-ignore */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/* prettier-ignore */
+input, button, textarea, select {
+  font: inherit;
+}
+/* prettier-ignore */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* prettier-ignore */
+#root, #__next {
+  isolation: isolate;
+}
+:root {
+  --text-color-1: #fff;
+  --text-color-2: #00ffc2;
+  --background-color1: #fafaf0;
+  --background-color2: #f5f4e4;
+  --border-color: rgba(0, 0, 0, 0.2);
+  --hover-color: #9daba9;
+}
+
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: scale(1);
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+ 
+  
+  /* use correct CSS property to have "background.svg" file under assets folder set as background image here */
+  background-attachment: scroll;
+}
+body{
+  background-image: url('../assets/background.svg');
+}
+code {
+  font-family: "Courier New", monospace;
+}
+.greentxt{
+  color: var(--text-color-2);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom:4%;
+  
+}
+h1{
+  font-size: 61px;
+  line-height: 59px;
+  margin-bottom: 4%;
+}
+.contentp{
+  margin-bottom: 4%;
+  width: 95%;
+
+}
+button{
+  background-color: transparent;
+  border: solid var(--text-color-2);
+  color: var(--text-color-1);
+  padding:1% 3% ;
+  border-radius: 24px;
+  font-weight: bold;
+  transition: 0.8s;
+  cursor: pointer;
+  margin-bottom: 2%;
+
+}
+button:hover{
+  color: var(--text-color-1); 
+  background-color: #fffffc20;
+  border: solid var(--text-color-1);
+}
+button:active{
+  transform: scale(1.1);
+}
+.sec-img, .img-container{
+  padding: 12px;
+  border: solid var(--text-color-2);
+  border-radius: 12px;
+
+}
+
+/* section */
+section , header{
+  padding: 8%;
+  border-bottom: solid rgb(110, 110, 110) 0.2px;
+  
+}
+p,h1,h3{
+  color: var(--text-color-1);
+}
+
+/* section1 */
+.sec-1{
+  background-image: url('../assets/background.svg');
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-auto-rows: 1fr;
+}
+.sec-4{
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-rows: 1fr;
+  margin-bottom: 4%;
+  .sec-content{
+    padding: 1% 8%;
+    text-align: start;
+    .contentp{
+      margin-bottom: 5%;
+    }
+
+  }
+}
+p{
+  font-size: 16px;
+}
+.sec-img{
+  width: 100%;
+  max-height: 500px;
+ }
+ img{
+  object-fit:cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+}
+.sec-content{
+  padding:11% 8%;
+}
+.fa-solid{
+  color: var(--text-color-2);
+}
+
+/* sec2 */
+.sec-2{
+  /* background-color: rgb(31, 28, 28); */
+  text-align: center;
+}
+.img-cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row: 1;
+  grid-gap:36px;
+
+}
+.img-content{
+  padding: 5% 0%;
+  margin-bottom: 8%;
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0% 12%;
+  /* width: 80%; */
+}
+.g-card1{
+  background-image: url('../assets/background.svg');
+  padding:10% 4%;
+  border: solid rgb(110, 110, 110) 1px ;
+  
+  margin-bottom: 6%;
+}
+.a{
+  border-top-left-radius:20px ;
+  border-bottom-left-radius: 20px;
+}
+.b{
+  border-top-right-radius:20px ;
+  border-bottom-right-radius: 20px;
+}
+.svg-container{
+  padding: 5px;
+  border: solid var(--text-color-2);
+  border-radius: 32px;
+  max-height: 40px;
+  max-width: 50px;
+  
+}
+.svg{
+  
+  object-fit: contain;
+ 
+  
+}
+ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  li{
+    margin-right: 20px;
+    
+   
+  }
+  
+}
+footer{
+  padding: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+hr{
+  border: solid rgb(110, 110, 110) 0.01px ;
+  
+}
+
+@media (max-width: 1280px) {
+  html {
+    font-size: 13pt;
+  }
+
+}
+
+@media (max-width: 736px) {
+  html {
+    font-size: 11pt;
+  }
+  .sec-4{
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr 1.5fr;
+    
+       .sec-content {
+          padding: 3% 0%;
+          text-align: center;
+      }
+  
+
+  }
+  .sec-1{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .sec-img{
+    max-height: 300px;
+  }
+  section , header{
+    padding: 4%;
+  }
+  .img-cards{
+    grid-template-columns: 1fr;
+    
+    .img-container{
+      max-height: 330px;
+      width: 100%;
+      img{
+        object-fit: cover;
+        max-height: 300px;
+      }
+    }
+  }
+  .a{
+    border-top-left-radius:20px ;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius:20px ;
+  border-bottom-right-radius: 0px;
+  }
+  .b{
+    border-top-left-radius:0px ;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius:0px ;
+  border-bottom-right-radius: 20px;
+  }
+h1{
+  font-size: 33px;
+  color: var(--text-color-1);
+
+}
+h3{
+  margin-top: 2%;
+}
+p{
+  font-size: 16px;
+  color: var(--text-color-1);
+}
+
+  .grid-container{
+    margin: 0% 0%;
+    margin-bottom: 4%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    .g-card1{
+      margin-bottom: 0%;
+      
+    }
+  }
+
+  footer{
+    flex-direction: column;
+
+  }
+  .icons{
+    margin-bottom: 15px;
+}
+.img-content, .sec-content{
+  padding: 0%;
+}
+  
+}
