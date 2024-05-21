@@ -1,0 +1,334 @@
+/*
+Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+/* prettier-ignore */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html {
+  font-size: 18pt;
+  /* import below fonts from https://fonts.google.com/ */
+  font-family: "Inter", sans-serif;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background: url(/single_page_2/assets/background.svg);
+  color: white;
+  padding: 50px;
+}
+/* prettier-ignore */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/* prettier-ignore */
+input, button, textarea, select {
+  font: inherit;
+}
+/* prettier-ignore */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* prettier-ignore */
+#root, #__next {
+  isolation: isolate;
+}
+:root {
+  --text-color-1: #fff;
+  --text-color-2: #00ffc2;
+  --background-color1: #fafaf0;
+  --background-color2: #f5f4e4;
+  --border-color: rgba(0, 0, 0, 0.2);
+  --hover-color: #9daba9;
+}
+
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: scale(1);
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  /* use correct CSS property to have "background.svg" file under assets folder set as background image here */
+  background-attachment: scroll;
+}
+
+code {
+  font-family: "Courier New", monospace;
+}
+
+
+
+/* .main{
+  padding: 100px;
+} */
+
+ hr{
+  position: absolute;
+  color: grey;
+  width: 100%;
+ }
+
+.header{
+  display: grid;
+  grid-template-columns: repeat(autofit,minmax(80px,1fr));
+  grid-template-areas: 
+  "text text img1";
+  grid-gap: 20px;
+    border-bottom: 1px solid grey;
+    padding: 50px;
+}
+
+p{
+  font-size: small;
+}
+
+h1{
+  font-size: 50px;
+}
+
+.imghead{
+  grid-area: img1;
+  max-width: 300px;
+  background-size:cover ;
+  border: 2px solid rgb(77, 240, 199) ;
+  border-radius: 50px;
+  padding: 10px;
+}
+img{
+  border-radius: 50px;
+}
+
+.text{
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+  justify-content: center;
+}
+
+.btn{
+  margin: 20px 20px 0 0;
+  border-radius: 50px;
+  font-size: small;
+  padding: 5px 10px 5px 10px;
+  border: 2px solid rgb(77, 240, 199) ;
+  width: 170px;
+  color:white ;
+  background: transparent; 
+  transition:0.5s;
+}
+
+.btn:hover{
+  background-color: rgba(255,255,255,0.09);
+  border-color: #fff;
+  
+}
+.btn:active{
+  transform: scale(1.1);
+}
+
+.sec{
+  align-items: center;
+}
+
+
+/* section1 */
+
+.head{
+  display: grid;
+  margin: 50px;
+  justify-content: center;
+  text-align: center;
+  grid-gap: 20px;
+}
+
+.gallery{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row: 1;
+  grid-gap:36px;
+ 
+}
+
+.img2{
+  border-radius: 20px;
+  border: 2px solid rgb(77, 240, 199) ;
+  padding: 5px;
+}
+.btn1{
+  display: grid;
+  justify-content: center;
+ 
+}
+
+/* section2 */
+
+.header1{
+  display: grid;
+  grid-template-columns: repeat(autofit,minmax(80px,1fr));
+  grid-template-areas: 
+  "img1 text text";
+  grid-gap: 50px;
+}
+
+.price{
+  display: flex;
+  
+  justify-items:center;
+  margin: 100px;
+}
+.card1{
+  border: 1px solid grey;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 50px 20px; 
+}
+
+.para1{
+  border-bottom: 1px solid grey;
+}
+
+
+footer{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-items: start;
+  padding: 50px;
+}
+
+ul{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 40px;
+  list-style: none;
+}
+
+svg{
+  height: 30px;
+  width: 30px;
+  border: 1px solid rgb(77, 240, 199);
+  border-radius: 50%;
+  padding: 5px;
+}
+
+
+.sec{
+  border-bottom: 1px solid grey;
+  padding: 50px;
+}
+
+
+
+
+@media (max-width: 1280px) {
+  html {
+    font-size: 13pt;
+  }
+}
+
+@media (max-width: 736px) {
+  html {
+    font-size: 11pt;
+  }
+  body{
+    padding: 0;
+    margin: 0;
+  }
+  .main{
+    padding: 0;
+    margin: 0;
+  }
+
+  .header{
+    display: grid;
+    grid-template-areas: 
+    "text"
+    "img1";
+    grid-gap: 20px;
+    border-bottom: 1px solid grey;
+    padding: 50px;
+  }
+  
+  section{
+    border-bottom: 1px solid grey;
+    padding: 50px;
+  }
+  .imghead{
+    grid-area: img1;
+    max-width: 100%;
+    max-height: 500px;
+    border: 2px solid rgb(77, 240, 199) ;
+    border-radius: 50px;
+    padding: 10px;
+  }
+  .imghead img{
+    max-height: 400px;
+    width: 100%;
+  }
+  .header1{
+    display: grid;
+    grid-template-areas: 
+    "img1"
+    "text";
+    grid-gap: 20px;
+   
+  }
+
+  .gallery{
+    display: grid;
+    grid-template-columns: 1fr;
+   
+  }
+
+  .text{
+    display: grid;
+   text-align: center;
+    justify-items: center;
+  }
+
+.price{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+ 
+}
+
+.card1{
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+
+  footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  ul{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+ footer>p{
+  text-align: center;
+ }
+   
+
+
+}
