@@ -1,0 +1,327 @@
+/*
+Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+/* prettier-ignore */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html {
+  font-size: 18pt;
+  /* import below fonts from https://fonts.google.com/ */
+  font-family: 'Inter', sans-serif;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/* prettier-ignore */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/* prettier-ignore */
+input, button, textarea, select {
+  font: inherit;
+}
+/* prettier-ignore */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* prettier-ignore */
+#root, #__next {
+  isolation: isolate;
+}
+:root {
+  --text-color-1: #fff;
+  --text-color-2: #00ffc2;
+  --background-color1: #fafaf0;
+  --background-color2: #f5f4e4;
+  --border-color: rgba(0, 0, 0, 0.2);
+  --hover-color: #9daba9;
+}
+
+body::before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: scale(1);
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  /* use correct CSS property to have "background.svg" file under assets folder set as background image here */
+  background-attachment: scroll;
+}
+
+code {
+  font-family: 'Courier New', monospace;
+}
+
+/* @media (max-width: 1280px) {
+  html {
+    font-size: 13pt;
+  }
+}
+
+@media (max-width: 736px) {
+  html {
+    font-size: 11pt;
+  }
+} */
+
+body {
+  color: var(--text-color-1);
+  font-family: 'Inter', sans-serif;
+  background-image: url(/single_page_2/assets/background.svg);
+}
+
+.section {
+  padding: 6rem 10rem;
+  border-bottom: 1px solid var(--hover-color);
+}
+
+.section1 {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.right {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.section1 .img {
+  height: 25rem;
+  width: auto;
+  border-radius: 1.5rem;
+  border: 0.1rem solid var(--text-color-2);
+  padding: 0.3rem;
+}
+
+.text1 {
+  text-transform: uppercase;
+  color: var(--text-color-2);
+  margin-bottom: 1rem;
+}
+
+.text2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text3 {
+  color: var(--text-color-1);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.button {
+  background-color: transparent;
+  color: var(--text-color-1);
+  border: 2px solid var(--text-color-2);
+  border-radius: 1.5rem;
+  max-width: fit-content;
+  padding: 0.5rem 2rem;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.image-container {
+  display: flex;
+  margin-bottom: 5rem;
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section2 .image-container .img {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 1.5rem;
+  border: 0.1rem solid var(--text-color-2);
+  padding: 0.3rem;
+  margin-bottom: 2rem;
+}
+
+.img-text1 {
+  margin-bottom: 2rem;
+}
+
+.img-text2 {
+  font-size: 0.9rem;
+  color: var(--text-color-1);
+  text-align: justify;
+}
+
+.image-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.section3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section3 .content-info .left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-info .left .img1 {
+  height: 30rem; 
+  border-radius: 1.5rem;
+  border: 0.1rem solid var(--text-color-2);
+  padding: 0.3rem;
+}
+
+.section3 .content-info {
+  display: flex;
+  margin-bottom: 5rem;
+}
+
+.section3 .content-info .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right1, .right2 {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--hover-color);
+}
+
+.right1 .p1, .right2 .p1 {
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.fa-long-arrow-right {
+  color: var(--text-color-2);
+}
+
+.section4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.row2 {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid var(--hover-color);
+  border-radius: 1.5rem;
+  width: 30rem;
+}
+
+.row2 .card1, .row2 .card2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.row2 .btn1 {
+  margin-top: 2rem;
+}
+
+.card1 {
+  border-right: 1px solid var(--hover-color);
+}
+
+.row2 .p2 {
+  text-align: center;
+}
+
+.row3 {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.row3 .p3 {
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 10rem;
+}
+
+.icons i {
+  border-radius: 50%;
+  border: 2px solid var(--text-color-2);
+  padding: 0.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.button:hover, .icons i:hover{
+  background-color: var(--hover-color);
+}
+
+.button:active {
+  transform: scale(1.2);
+}
+
+/* .copyright {
+  margin-left: 5rem;
+} */
+@media (max-width: 1280px) {
+  html {
+    font-size: 13pt;
+  }
+}
+
+@media (max-width: 736px) {
+  html {
+    font-size: 11pt;
+  }
+
+  
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 11pt;
+  }
+}
