@@ -1,0 +1,52 @@
+/*
+Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+/* prettier-ignore */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+* {
+  margin: 0;
+}
+html {
+  font-size: 18pt;
+  /* import below fonts from https://fonts.google.com/ */
+  font-family: "Inter", sans-serif;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  color: var(--text-color-1);
+}
+/* prettier-ignore */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+/* prettier-ignore */
+input, button, textarea, select {
+    font: inherit;
+  }
+/* prettier-ignore */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+/* prettier-ignore */
+#root, #__next {
+    isolation: isolate;
+  }
+:root {
+  --text-color-1: #0a0a0a;
+  --text-color-2: #969696;
+  --text-color-3: #b0b0b0;
+  --background-color1: #c88979;
+  --background-color2: #e2e7ea;
+  --background-color2: #fff;
+  --hover-color: #9e9e9e;
+}
+
+/* 
+  For card background svg use background-image property to place the url and below linear-gradient values
+  linear-gradient(360deg, #C88979 0%, #C48372 100%)
+*/
