@@ -1,0 +1,343 @@
+/*
+Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+/* prettier-ignore */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html {
+  font-size: 18pt;
+  /* import below fonts from https://fonts.google.com/ */
+  font-family: "Inter", sans-serif;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/* prettier-ignore */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/* prettier-ignore */
+input, button, textarea, select {
+  font: inherit;
+}
+/* prettier-ignore */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* prettier-ignore */
+#root, #__next {
+  isolation: isolate;
+}
+:root {
+  --text-color-1: #fff;
+  --text-color-2: #00ffc2;
+  --background-color1: #fafaf0;
+  --background-color2: #f5f4e4;
+  --border-color: rgba(0, 0, 0, 0.2);
+  --hover-color: #9daba9;
+}
+
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: scale(1);
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  /* use correct CSS property to have "background.svg" file under assets folder set as background image here */
+  background-attachment: scroll;
+  background-image: url("../assets/background.svg");
+  /* background: #181a1c; */
+}
+
+code {
+  font-family: "Courier New", monospace;
+}
+
+/* common */
+.text1{
+  font-size: 12pt;
+  color: var(--text-color-2);
+  text-transform: uppercase;
+}
+.text2{
+font-size: 32pt;
+font-weight: 500;
+color: var(--text-color-1);
+}
+
+.text3{
+  font-size: 14pt;
+  color: var(--text-color-1);
+  margin-bottom: 20px;
+  margin-top: 1rem;
+}
+
+.text4{
+  font-size: 12pt;
+  color: var(--text-color-1);
+  margin-bottom:20px;
+  margin-top: 1rem;
+}
+
+button{
+  border-radius: 3rem;
+  border-color: var(--text-color-2);
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+  background: none;
+  max-width: fit-content;
+  font-size: 10pt;
+  color: var(--text-color-1);
+  margin: 10px;
+}
+button:hover{
+  border-color: var(--hover-color);
+  background-color: rgba(255,255,255,0.09);
+  transition: 0.2s;
+}
+button:active{
+  transform: scale(1.1);
+}
+
+.container{
+border-style: solid;
+border-width: 2px;
+border-color:rgba(255,255,255,0.09);
+padding-bottom: 30px;
+padding-top: 20px;
+}
+/* main */
+/* body{
+  background: #181a1c;
+} */
+
+/* header */
+.header{
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  .head{
+    width:60%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 5rem;
+  }
+  .img1 {
+    width: 10rem;
+    height: 16rem;
+    border-radius: 0.5rem;
+    margin-top: 50px;
+    padding: 6px;
+
+  }
+}
+
+/* section1 */
+.card-content-40{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card-content-60{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  .text3{
+    width: 50%;
+  }
+
+}
+.img1 {
+  width: 10rem;
+  height: 10rem;
+  border: 2px solid var(--text-color-2);
+  border-radius: 18px;
+  width: 60%;
+  padding: 6px;
+}
+
+/* section 2 */
+.container2{
+  display: flex;
+  margin-top: 50px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-2{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  align-items:center;
+}
+
+.card-image{
+  width: 15%;
+  max-height: 40%;
+  border-radius: 2px;
+  margin-top: 50px;
+  padding: 6px;
+  border: 2px solid var(--text-color-2);
+  border-radius: 18px;
+}
+.card-content-60 .details-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.card-content{
+  width: 40%;
+}
+
+/* section3 */
+.container3{
+  display: flex;
+  margin-top: 50px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-content-3{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.card-content-6{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  .text3{
+    width: 50%;
+  }
+  .text2{
+    font-size: 42pt;
+  }
+}
+.money-details{
+  border: 2px solid var(--hover-color);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-right-width: 2px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2px;
+}
+.money-details2{
+  border: 2px solid var(--hover-color);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-left-width: 2px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2px;
+}
+
+/* .card-content-6{
+  border: 3px solid var(--hover-color);
+  border-radius: 20px;
+} */
+
+
+/* footer */
+footer{
+  padding: 30px;
+}
+.fa-brands, .fa-envelope, .fa-regular{
+  border: 2px solid var(--text-color-2);
+  color: var(--text-color-1);
+  padding: 8px;
+  border-radius: 35px;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  margin: 0px 5px;
+}
+@media (max-width: 1280px) {
+  html {
+    font-size: 13pt;
+  }
+}
+
+@media (max-width: 736px) {
+  html {
+    font-size: 11pt;
+  }
+  /* common */
+  .text1{
+    font-size: 8pt;
+    color: var(--text-color-2);
+    text-transform: uppercase;
+    text-align: center;
+
+  }
+  .text2{
+  font-size: 18pt;
+  font-weight: 500;
+  color: var(--text-color-1);
+  text-align: center;
+  }
+  
+  .text3{
+    font-size: 10pt;
+    color: var(--text-color-1);
+    margin-bottom: 20px;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+/* header */
+
+/* main */
+
+main{
+  display: grid;
+  width: 100%;
+  height: 200px;
+  grid-template:
+    [header-left] "sec1 sec1" 30px [header-right]
+    [header-left] "sec2 sec2" 30px [header-right]
+    [header-left] "sec3 sec3" 30px [header-right];
+}
+
+.container{
+  grid-area: sec1;
+}
+
+.container2{
+  grid-area: sec2;
+}
+
+#container3{
+  grid-area: sec3;
+}
+
+
+}
