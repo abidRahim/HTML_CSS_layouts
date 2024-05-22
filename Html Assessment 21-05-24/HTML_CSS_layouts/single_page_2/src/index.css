@@ -1,0 +1,276 @@
+/*
+Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+/* prettier-ignore */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html {
+  font-size: 18pt;
+  /* import below fonts from https://fonts.google.com/ */
+  font-family: "Inter", sans-serif;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/* prettier-ignore */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/* prettier-ignore */
+input, button, textarea, select {
+  font: inherit;
+}
+/* prettier-ignore */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* prettier-ignore */
+#root, #__next {
+  isolation: isolate;
+}
+:root {
+  --text-color-1: #fff;
+  --text-color-2: #00ffc2;
+  --background-color1: #fafaf0;
+  --background-color2: #f5f4e4;
+  --border-color: rgba(0, 0, 0, 0.2);
+  --hover-color: #9daba9;
+}
+
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: scale(1);
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  /* use correct CSS property to have "background.svg" file under assets folder set as background image here */
+  background-attachment: scroll;
+  background-image: url("/assets/background.svg");
+}
+
+
+code {
+  font-family: "Courier New", monospace;
+}
+
+@media (max-width: 1280px) {
+  html {
+    font-size: 13pt;
+  }
+}
+
+@media (max-width: 736px) {
+  html {
+    font-size: 11pt;
+  }
+}
+
+
+h1,h4,h6, p {
+  color: var(--text-color-1);
+  padding: 15px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 13px;
+}
+
+h6 {
+  color: var(--text-color-2);
+}
+
+
+header {
+  box-sizing: border-box;
+  padding: 100px ;
+  display: flex;
+}
+
+.header1 {
+  padding: 100px ;
+  
+}
+
+.header1 .h1 {
+  font-size: 80px;
+}
+.conatainer1 {
+  display: flex;
+}
+
+img {
+  border-radius: 20px;
+  border: 2px solid var(--text-color-2);
+  padding: 10px;
+  width: 550px;
+  object-fit: cover;
+  
+}
+
+.image2 {
+  object-fit: cover;
+  width: 450px;
+  
+}
+
+
+
+button {
+  border-radius: 20px;
+  background-color: black;
+  color: var(--text-color-1);
+  font-size: 10px;
+  border: 2px solid var(--text-color-2);
+  padding: 10px 25px 10px 25px;
+  margin: 20px;
+
+
+
+}
+
+.grid-img {
+  display: flex;
+  /* box-sizing: border-box; */
+  padding: 20px;
+  margin: 20px;
+  
+
+}
+
+.second-button {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.third-button{
+  text-align: center;
+  padding-bottom: 60px;
+
+}
+
+.last-button {
+  text-align: center;
+  padding-bottom: 60px;
+
+}
+
+.container1-c1 {
+  
+  text-align: center;
+  padding-top: 60px;
+}
+
+.container2-cont1 {
+  text-align: center;
+  padding-top: 60px;
+}
+
+.container3-cont1 {
+  text-align: center;
+  padding-top: 60px;
+}
+
+.last {
+  text-align: center;
+  padding-top: 60px;
+}
+
+.set {
+  display: flex;
+  padding: 100px;
+}
+ 
+.side{
+  padding: 40px;
+  
+}  
+
+.cont1-c1 {
+  margin: 40px;
+}
+
+
+
+.cont2 {
+  border-bottom: 1px solid #9daba9;
+}
+
+.mid {
+  display: flex;
+  box-sizing: border-box;
+  padding: 60px;
+  margin: 100px;
+  border-color: rgba(255,255,255,0.09);
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 1.5rem;
+  
+}
+
+.cont3 {
+  
+}
+
+.grid-img img {
+  object-fit: cover;
+}
+
+
+
+.container2-cont1 {
+  text-align: center;
+}
+
+.conatainer1.conatainer-c1 {
+  box-sizing: border-box;
+  padding: 80px ;
+  
+}
+
+
+
+
+
+.footer {
+  display: flex;
+
+}
+
+.footer_icons{
+  color:white;
+  letter-spacing: 10px;
+  width:100%;
+  padding-left:80px;
+  padding-bottom:50px;
+  display: inline-block;
+  margin: 20px;
+}
+.footer_icons i{
+  box-sizing: border-box;
+  border: 2px solid #00ffc2;
+  padding: 10px 0px 10px 10px;
+  border-radius: 25px;
+  text-align: center;
+
+ 
+}
+
+footer {
+  display: flex;
+}
