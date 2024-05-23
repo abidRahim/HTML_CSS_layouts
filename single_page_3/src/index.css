@@ -1,0 +1,171 @@
+/*
+Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+/* prettier-ignore */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+* {
+  margin: 0;
+}
+html {
+  font-size: 18pt;
+  /* import below fonts from https://fonts.google.com/ */
+  font-family: "Inter", sans-serif;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  color: var(--text-color-1);
+  background-color: rgb(154, 154, 154); 
+}
+/* prettier-ignore */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+/* prettier-ignore */
+input, button, textarea, select {
+    font: inherit;
+  }
+/* prettier-ignore */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+/* prettier-ignore */
+#root, #__next {
+    isolation: isolate;
+  }
+:root {
+  --text-color-1: #0a0a0a;
+  --text-color-2: #969696;
+  --text-color-3: #b0b0b0;
+  --background-color1: #c88979;
+  --background-color2: #e2e7ea;
+  --background-color3: #c6c2c2;
+  --hover-color: #9e9e9e;
+}
+header h1 {
+  font-size: 50px;
+  font-weight: 4;
+  color: var(--text-color-1); 
+}
+h6{
+  color: #969696;
+  font-size: 11px;
+}
+p {
+  font-size: large;
+  color: var(--text-color-2);
+  line-height: 30px;
+  padding-top: 4%;
+}
+h1{
+  color: var(--text-color-1);
+}
+button {
+  align-items: center;
+  width: 150px;
+  border-radius: 50px;
+  font-size: small;
+  padding: 10px;
+  color: var(--background-color2);
+  border: 2px solid var(--background-color1);
+  margin: 5% 0% 0% 0% ;
+  background-color: var(--background-color1);
+}
+.green {
+  margin: 8% 10%;
+  padding: 5% 0%;
+  display: flex;
+  flex-basis: 50% 50%;
+  justify-content: center;
+  color: var(--background-color3);
+}
+.red {
+    display: flex;
+    flex-basis: 70% 30%;
+    color: var(--background-color2);
+}
+.lft {
+    display: flex;
+    flex-direction: column;
+    margin: 8% 10%;
+}
+.lft1{
+    margin: 5%;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+}
+img {
+    aspect-ratio: 4 / 6;
+    object-fit: cover;
+}
+input {
+  border-radius: 50px;
+  width: 65%;
+  border: 2px solid var(--background-color2);
+  padding: 8px;
+  font-size: 18px;
+  margin-top: 5%;
+}
+.up{
+  width: 90px;
+}
+.fa-brands,
+.fa-envelope {
+  border: solid var(--border-color);
+  color: #c88979;
+  padding: 7px;
+  border-radius: 35px;
+  font-size: 18px;
+  height: 40px;
+  width: 40px;
+  margin: 10px 5px;
+}
+.main{
+  background-color: white;
+  margin: 200px;
+}
+footer{
+  margin-bottom: 10%;
+}
+.rd{
+  background-color: #c88979;
+  background-image: url("/HTML_CSS_layouts-main/single_page_3/assets/background.svg");
+}
+.btn{
+  background-color: white;
+  color: #c88979;
+}
+
+@media (max-width: 736px) {
+    
+  html {
+    font-size: 12pt;
+  }
+  body{
+    line-height: 1;
+    background-color: white;
+  }
+  .green{
+    display: block;
+  }
+  .red{
+    display: block;
+  }
+  input{
+    width: 100%;
+    font-size:14px;
+    margin-top: 5%;
+  }
+  .lft1{
+    margin: 1%;
+  }
+  .main{
+    margin: 0%;
+  }
+}
