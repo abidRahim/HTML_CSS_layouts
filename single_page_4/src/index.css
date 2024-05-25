@@ -1,0 +1,66 @@
+/*
+Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+/* prettier-ignore */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+* {
+  margin: 0;
+}
+html {
+  font-size: 18pt;
+  /* import below fonts from https://fonts.google.com/ */
+  font-family: "Inter", sans-serif;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  color: var(--text-color-1);
+}
+/* prettier-ignore */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/* prettier-ignore */
+input, button, textarea, select {
+  font: inherit;
+}
+/* prettier-ignore */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* prettier-ignore */
+#root, #__next {
+  isolation: isolate;
+}
+
+:root {
+  --text-color-1: ##fff;
+  --text-color-2: #ffbac6;
+  --text-color-3: #525252;
+  --hover-color: #9e9e9e;
+}
+
+body {
+  background-image: radial-gradient(
+    65% 88% at 50% 50%,
+    #ffffff 0%,
+    #ededed 59%
+  );
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+/* This is to be used for the ::before psuedo element of <hr> tag to provide width, height and backgroiund-image*/
+hr.style::before {
+  background-image: linear-gradient(
+    90deg,
+    #9f9deb 0%,
+    #f29dac 100%,
+    rgba(242, 157, 172, 0.008) 100%
+  );
+}
