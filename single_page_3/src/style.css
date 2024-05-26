@@ -1,0 +1,294 @@
+/*
+Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+/* prettier-ignore */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+* {
+  margin: 0;
+}
+html {
+  font-size: 18pt;
+  /* import below fonts from https://fonts.google.com/ */
+  font-family: "Inter", sans-serif;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  color: var(--text-color-1);
+  background-color: #c5c2c2;
+  z-index:-1
+}
+/* prettier-ignore */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+/* prettier-ignore */
+input, button, textarea, select {
+    font: inherit;
+  }
+/* prettier-ignore */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+/* prettier-ignore */
+#root, #__next {
+    isolation: isolate;
+  }
+:root {
+  --text-color-1: #0a0a0a;
+  --text-color-2: #969696;
+  --text-color-3: #b0b0b0;
+  --background-color1: #c88979;
+  --background-color2: #e2e7ea;
+  --background-color2: #fff;
+  --hover-color: #9e9e9e;
+}
+
+/* 
+  For card background svg use background-image property to place the url and below linear-gradient values
+  linear-gradient(360deg, #C88979 0%, #C48372 100%)
+*/
+
+.main{
+
+  padding: 50px 200px 0px 200px;
+}
+
+.header{
+  display: grid;
+  grid-template-columns: repeat(autofit,minmax(80px,1fr));
+  grid-template-areas: 
+  "icon icon img1"
+  "text text img1"
+  "text text img1";
+  grid-gap: 20px;
+   background: var(--background-color2);
+    /* padding: 50px; */
+}
+
+
+input{
+  margin: 20px;
+   
+  border: 1px solid var(--background-color1) ;
+  border-radius: 50px;
+  letter-spacing: 5px;
+  font-size: small;
+  padding: 10px;
+}
+
+.text{
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px 0px 50px 50px;
+  align-items: start;
+  justify-content: center;
+}
+
+
+ul{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  list-style: none;
+  text-align: left;
+  grid-gap:50px;
+}
+
+svg{
+  height: 30px;
+  width: 30px;
+  background-color: #0a0a0a;
+  border-radius: 50%;
+  /* gap:50px; */
+  padding: 5px;
+  color: black;
+}
+
+.btn{
+  margin: 20px 20px 0 0;
+  border-radius: 50px;
+  font-size: small;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid var(--background-color1);
+  /* width: 170px; */
+  color: white;
+  background-image: 
+  url('/single_page_3/assets/background.svg'), 
+  linear-gradient(360deg, #C88979 0%, #C48372 100%);
+  transition:0.5s;
+}
+
+.btn:hover{
+  background-color: rgba(255,255,255,0.09);
+  border-color: #0a0909;
+  
+}
+.btn:active{
+  transform: scale(1.1);
+}
+
+.btn1{
+  justify-content: start;
+  width: 170px;
+}
+
+p{
+  font-size: small;
+}
+
+h1{
+  font-size: 50px;
+  font-weight: 100;
+}
+
+.imghead{
+  grid-area: img1;
+  height: 100%;
+ 
+  background-size:cover ;
+  
+  border-radius: 50px;
+}
+.imghead img{
+  height: 100%;
+}
+
+
+.sec:nth-child(even){
+  background: rgb(239, 239, 239);
+}
+
+.price{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-items:center;
+  padding: 50px;
+  grid-gap: 50px;
+}
+.sec h1{
+  font-size: larger;
+  /* font-weight: 100; */
+}
+.card1{
+
+ display: flex;
+ gap:10px;
+ flex-direction: column;
+ align-items: left;
+ /* padding: 50px;  */
+}
+
+.price1{
+  display: grid;
+ 
+  justify-items:center;
+  padding: 50px;
+}
+
+
+.sec1{
+  background-image: 
+  url('/single_page_3/assets/background.svg'), 
+  linear-gradient(360deg, #C88979 0%, #C48372 100%);
+}
+
+
+
+
+footer{
+  display: grid;
+   grid-gap: 20px;
+  justify-items: center;
+  padding: 50px;
+}
+
+ul{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 40px;
+  list-style: none;
+}
+
+svg{
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  background-color: transparent;
+}
+
+
+
+
+@media (max-width: 736px){
+   html{
+    font-size:11pt;
+   }
+.main{
+ padding: 50px;
+}
+
+.header{
+  display: grid;
+   
+   grid-template-areas:
+   "img1 img1 img1" 
+   "text text text"; 
+  grid-gap: 20px;
+   background: white;
+    
+}
+
+
+.imghead{
+  grid-area:img1;
+  width: 100%;
+}
+
+
+
+
+/* .text{
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+} */
+
+
+.price{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+ 
+}
+
+.card1{
+  align-items: start;
+
+  justify-content: start;
+  width: 100%;
+}
+
+.inputarea{
+  display: grid;
+  grid-template-rows: 1fr;
+  width: 100%;
+  
+}
+
+.inputarea .btn{
+  width:100px;
+}
+
+/* input[type="email"]{
+  width: 100%;
+} */
+
+}
