@@ -1,0 +1,212 @@
+/*
+Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+/* prettier-ignore */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+* {
+  margin: 0;
+}
+html {
+  font-size: 22pt;
+  /* import below fonts from https://fonts.google.com/ */
+  font-family: "Inter", sans-serif;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  color: var(--text-color-1);
+}
+/* prettier-ignore */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/* prettier-ignore */
+input, button, textarea, select {
+  font: inherit;
+}
+/* prettier-ignore */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* prettier-ignore */
+#root, #__next {
+  isolation: isolate;
+}
+
+:root {
+  --text-color-1: #fff;
+  --text-color-2: #ffbac6;
+  --text-color-3: #525252;
+  --hover-color: #9e9e9e;
+}
+
+body {
+  background-image: radial-gradient(
+    65% 88% at 50% 50%,
+    #ffffff 0%,
+    #ededed 59%
+  );
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+/* This is to be used for the ::before psuedo element of <hr> tag to provide width, height and backgroiund-image*/
+hr.style::before {
+  background-image: linear-gradient(
+    90deg,
+    #9f9deb 0%,
+    #f29dac 100%,
+    rgba(242, 157, 172, 0.008) 100%
+  );
+}
+
+.main {
+  display: grid;
+  grid-template-rows: 3;
+  padding: 20%;
+  color: var(--text-color-1);
+  text-align: center;
+}
+
+button {
+  width: 25%;
+  background: none;
+  outline-color: white;
+  border-radius: 50px;
+  font-size: small;
+  padding: 10px;
+  color: var(--text-color-1);
+  border: 2px solid var(--text-color-1);
+  margin: 5% 0% 0% 0%;
+  transition: transform 0.2s; 
+}
+
+button:hover {
+  transform: scale(1.1); 
+}
+
+
+p {
+  margin: 2%;
+  font-size: small;
+}
+.outline > p{
+  margin: 8%;
+}
+
+h6 {
+  color: var(--text-color-2);
+  font-size: small;
+  font-weight: normal;
+}
+
+.plain {
+  margin: 4% 18% 12% 18%;
+  padding: 5% 0 0 0;
+  color: var(--text-color-3);
+  text-align: center;
+}
+
+.border {
+  border-top: 5px solid;
+  width: 10%;
+  padding-block-start: 5%;
+  border-image-source: linear-gradient(45deg, #9f9deb, #f29dac);
+  border-image-slice: 1;
+}
+
+.pics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.picss {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 5%;
+}
+
+img {
+  padding: 10%;
+}
+
+.outline>button {
+  align-items: center;
+  width: 55%;
+  background: none;
+  outline-color: white;
+  border-radius: 50px;
+  font-size: small;
+  padding: 10px;
+  color: var(--text-color-3);
+  border: 2px solid var(--hover-color);
+  margin: 5% 0% 0% 0%;
+}
+
+footer {
+  margin: 5%;
+}
+
+.fa-brands,
+.fa-regular {
+  color: var(--text-color-3);
+  font-size: 22px;
+  padding: 5% 2%;
+  transition: transform 0.2s;
+}
+
+.fa-brands:hover,
+.fa-regular:hover {
+  transform: scale(2);
+}
+
+
+ @media (max-width: 736px) {
+
+  html {
+    font-size: 12pt;
+  }
+  .main {
+    display: block;
+
+    padding: 16%;
+  }
+  .plain{
+    margin: 4% 9% 4% 9%;
+  }
+  button{
+    width: 40%;
+  }
+  .outline > button {
+    width: 30%;
+  }
+  .pics {
+    display: inline-block;
+    margin: 0;
+  }
+  .picss{
+    display: block;
+    margin: 1%;
+  }
+  p{
+    margin: 5%;
+  }
+  .outline > p{
+    margin: 5%;
+  }
+  img{
+    padding: 7%;
+  }
+
+  h5{
+    padding: 0;
+    margin: 0;
+  }
+
+}
